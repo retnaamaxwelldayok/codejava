@@ -2,33 +2,39 @@ package oop;
 
 public class MyStack {
     private boolean isEmpty = true;
-    private int counter;
+    private int top;
     private String[] stack;
+    private int stackSize;
+    private boolean isFull = false;
 
-    public MyStack(int i) {
-        stack = new String[i];
+    public MyStack(int stackSize) {
+        this.stackSize = stackSize;
+        stack = new String[stackSize];
     }
 
     public boolean isEmpty() {
         return isEmpty;
     }
 
-    public void push(String retnaa) {
-        if (counter < (stack.length)){
-            stack[counter] = retnaa;
-            counter++;
+    public void push(String elament) {
+        if (top < (stack.length)){
+            stack[top++] = elament;
         }
         isEmpty = false;
     }
 
     public void pop() {
-        counter--;
-        boolean stackIsEmpty = counter == 0;
+        top--;
+        boolean stackIsEmpty = top == 0;
         if (stackIsEmpty) isEmpty = true;
     }
 
     public String peak() {
+        return stack[--top];
+    }
 
-        return stack[counter - 1];
+    public boolean isFull() {
+        if(top == stackSize) isFull = true;
+        return isFull;
     }
 }

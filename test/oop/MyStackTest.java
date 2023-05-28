@@ -72,4 +72,19 @@ public class MyStackTest {
         assertEquals("Snap", stack.peak());
 
     }
+    @Test public void pushABXYZ_StackIsFullTest(){
+        stack.push("Retnaa");
+        stack.push("Oyi");
+        stack.push("Jay");
+        stack.push("Jay");
+        stack.push("Snap");
+
+        assertTrue(stack.isFull());
+    }
+    @Test public void pushX_StackShouldBeEmptyTest(){
+        stack.push("Retnaa");
+
+        assertFalse(stack.isFull());
+    }
+
 }
