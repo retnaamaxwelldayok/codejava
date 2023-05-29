@@ -81,4 +81,8 @@ public class CreditCardValidator {
     public boolean isCreditCardNumberAllNumericDigits() {
         return isCreditCardNumberAllNumericDigits;
     }
+
+    public String getCreditCardStatus() {
+        return null;
+    }
 }

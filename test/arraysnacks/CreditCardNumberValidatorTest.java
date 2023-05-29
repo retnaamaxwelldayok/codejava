@@ -80,4 +80,12 @@ public class CreditCardNumberValidatorTest {
 
         assertEquals("Invalid Card", creditCardValidator.tellCardType());
     }
+    @Test public void sumDoubledSecondDigitsFromLeftToRight_IfDoubledDigitResultToTwoDigitNumber_AddNumbersSingleDigitsToGerASingleDigitTest(){
+        creditCardValidator = new CreditCardValidator("4388576018402626");
+        creditCardValidator.validateCreditCardType();
+
+        creditCardValidator.populateArrayWithCreditCardNumbers();
+
+        assertEquals("Invalid", creditCardValidator.getCreditCardStatus());
+    }
 }
