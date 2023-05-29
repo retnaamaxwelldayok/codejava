@@ -23,8 +23,6 @@ public class MyStackTest {
     }
     @Test public void pushXStackIsNotEmptyTest(){
         MyStack stack = new MyStack(5);
-//       this is done if you need the method to return something,
-//       but you are making it void still int stack = stack.push("Retmaa");
         stack.push("Retnaa");
         assertFalse(stack.isEmpty());
     }

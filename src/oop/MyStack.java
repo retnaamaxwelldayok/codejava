@@ -16,9 +16,9 @@ public class MyStack {
         return isEmpty;
     }
 
-    public void push(String elament) {
+    public void push(String element) {
         if (top < (stack.length)){
-            stack[top++] = elament;
+            stack[top++] = element;
         }
         isEmpty = false;
     }
