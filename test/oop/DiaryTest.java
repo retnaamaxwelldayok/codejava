@@ -75,6 +75,8 @@ public class DiaryTest {
         mydiary.deleteEntry(1);
 
         assertEquals(1, mydiary.countGist());
+    }
+    @Test public void sumOfSecondDigitsFromLeftToRight(){
 
     }
 }
