@@ -89,13 +89,18 @@ public class MyList {
     }
 
     public int indexOf(int element) {
+        int elmentFirstIndex = -1;
         int index = 0;
         for (; index < listSize; index++)
-            if (myList[index] == element) break;
-        return index;
+            if (myList[index] == element) {
+                elmentFirstIndex = index;
+                break;
+            }
+        return elmentFirstIndex;
     }
 
     public int lastIndexOf(int element) {
+        int elmentLastIndex = -1;
         int index = 0;
         int elementLastIndex = 0;
         for (; index < listSize; index++)
